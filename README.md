@@ -1,5 +1,11 @@
 # homelab-docs
+
+Goal: Kubernetes cluster, running 24/7 using cellular network based on (tailscale/wireguard/cloudflare tunnels) with self-hosted popular services like navidrome, jellyfin or moonlight.
+
+
 Initial thoughts with tools and devices
+
+
 
 Devices: 
 1. Raspberry Pi 4 (1 ethernet, 2xUSB 2.0 2xUSB 3.0, WiFi, Bluetooth),
@@ -8,6 +14,8 @@ Devices:
 4. Ubuntu Desktop PC x64/86 on AM4 with AMD CPU & GPU
 5. NTFS HDD (USB)
 6. ext4 SSD (USB)
+7. a VPS as a gateway because CGNAT doesn't give public static IP (in Poland there is one company that does this for a customer: OTVARTA very limited plan but you don't have to run a business to get it)
+BTW. From what I got e-mailing them, they also setup reverse dns for self hosted e-mail purposes.
 
 
 Thinking proces:
@@ -49,4 +57,5 @@ Why are commands named like this and that, how to memorize those better?
 5. while shame to admit kubernetes has so many commands it was much more convienent to use: history | grep "kubectl" and see previous commands to memorize them and understand what we were typing. I use notes and scroll thru console but it is much better now especially with "| tail -10" at the end.
 Example: history | grep "kubectl" | tail -10
 Gives: last 10 commands that we used in the terminal with kubectl
-
+While complicating it all, a command: history 10
+will do just fine.
