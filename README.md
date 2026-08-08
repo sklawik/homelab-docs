@@ -46,3 +46,7 @@ Why are commands named like this and that, how to memorize those better?
 2. command svc used in kubectl is shortcut to service
 3. k3s is wrapper, kubectl command alone works but it will also work while typing k3s first like: k3s kubectl get services or kubectl get services is same
 4. Grep command - it is used 99% on Linux to use it after previous command output, but what if we want to use it alone? let's say we have file.txt in current directory. grep "target" ./file.txt . So the first parameter is target search and second file location which is not that intuitive because usually you type file location first and then next parameters.
+5. while shame to admit kubernetes has so many commands it was much more convienent to use: history | grep "kubectl" and see previous commands to memorize them and understand what we were typing. I use notes and scroll thru console but it is much better now especially with "| tail -10" at the end.
+Example: history | grep "kubectl" | tail -10
+Gives: last 10 commands that we used in the terminal with kubectl
+
