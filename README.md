@@ -39,6 +39,7 @@ example result: 10.42.0.103:80
 
 
 Curiousity while learning:
+
 Why are commands named like this and that, how to memorize those better?
 
 1. command avk: it is named avk, because of its creators name, nothing to think about deeply
