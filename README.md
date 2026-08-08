@@ -36,3 +36,12 @@ why not double quotes for awk?
 because awk takes single quotes so what you type you give to awk
 and if double quotes the bash will try to make sense of $2 which will give awk just $2
 example result: 10.42.0.103:80
+
+
+Curiousity while learning:
+Why are commands named like this and that, how to memorize those better?
+
+1. command avk: it is named avk, because of its creators name, nothing to think about deeply
+2. command svc used in kubectl is shortcut to service
+3. k3s is wrapper, kubectl command alone works but it will also work while typing k3s first like: k3s kubectl get services or kubectl get services is same
+4. Grep command - it is used 99% on Linux to use it after previous command output, but what if we want to use it alone? let's say we have file.txt in current directory. grep "target" ./file.txt . So the first parameter is target search and second file location which is not that intuitive because usually you type file location first and then next parameters.
