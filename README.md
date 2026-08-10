@@ -66,3 +66,18 @@ Example: history | grep "kubectl" | tail -10
 Gives: last 10 commands that we used in the terminal with kubectl
 While complicating it all, a command: history 10
 will do just fine.
+
+
+Moreover, Over the last 24h...
+Wifi from USB ZTE 4G modem with built-in wi-fi router was my default home network device.
+But now changes has been made.
+1. Raspbery Pi: Installed OpenWrt (Wrt stands for Wireless Router)
+Download link: https://firmware-selector.openwrt.org/
+2. Detected missing package that supports usb-modems: kmod-usb-net-cdc-ether and installed it using UI, CLI also avaliable: apk add kmod-usb-net-cdc-ether
+3. Configured wi-fi for stable connections, masqueraded zte modem interface into rpi's interface that gives the connection using ethernet port to ubuntu desktop and wi-fi to nearby devices.
+4. Disabled ZTE modem built-in wi-fi router, so RPI has internet only from cellular tower and only hands it to the Rpi thru USB.
+
+Eliminated problems & learning curve:
+ 1. iOS devices using built-in zte modem wifi had forced private addressses (often changing) that couldn't detect properly home network services now when iOS devices connect to openWrt wi-fi, DHCP works flawless and sets up correct ip addresses.
+2. Increased wi-fi stability
+3. Enhanced overall control of home network (logs, configurations, etc) opening new possibilities
