@@ -82,5 +82,14 @@ Eliminated problems & learning curve:
 2. Increased wi-fi stability
 3. Enhanced overall control of home network (logs, configurations, etc) opening new possibilities
 
-Moonlight with sunshine setup with wake on lan learning curve
+Media streaming via Ubuntu Desktop (to act as a nvidia shadowplay for video game streaming but self hosted)
+
+Moonlight on iOS that is client to sunshine streaming server:
+https://github.com/moonlight-stream/moonlight-ios
+
+Moonlight server as AppImage:
 https://github.com/LizardByte/Sunshine/releases
+
+Enabled wake on lan in the network in ASRock BIOS.
+Filled ip, mac address, port of the desktop pc to wake it up using mobile app that sends "magic packet" - Simple Wake on Lan for iOS by herzhenr
+https://github.com/herzhenr/simple-wake-on-lan
