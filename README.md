@@ -93,3 +93,5 @@ https://github.com/LizardByte/Sunshine/releases
 Enabled wake on lan in the network in ASRock BIOS.
 Filled ip, mac address, port of the desktop pc to wake it up using mobile app that sends "magic packet" - Simple Wake on Lan for iOS by herzhenr
 https://github.com/herzhenr/simple-wake-on-lan
+
+Moonlight auto-configures mac address if you set it up by just clicking interface and not putting ipv4 address by yourself, so now I use moonlight to wake devices up.
