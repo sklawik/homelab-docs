@@ -81,3 +81,6 @@ Eliminated problems & learning curve:
  1. iOS devices using built-in zte modem wifi had forced private addressses (often changing) that couldn't detect properly home network services now when iOS devices connect to openWrt wi-fi, DHCP works flawless and sets up correct ip addresses.
 2. Increased wi-fi stability
 3. Enhanced overall control of home network (logs, configurations, etc) opening new possibilities
+
+Moonlight with sunshine setup with wake on lan learning curve
+https://github.com/LizardByte/Sunshine/releases
