@@ -34,6 +34,7 @@ kubectl create deployment NAME --image=IMAGE
 kubectl expose deployment NAME --port=PORT
 kubectl scale deployment nginx --replicas=REPLICAS_INTIGER
 used kubectl apply -f deployment_file.yaml along with PVC and service file to set up navidrome
+used kubectl get namespace to see namespaces that can be switched while adding usually -n parameter to most commands
 
 Additionally learned:
 1. avk use with grep (or commands that take output of previous one with this symbol: |)
