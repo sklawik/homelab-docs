@@ -33,6 +33,7 @@ kubectl scale nginx --replicas=2
 kubectl create deployment NAME --image=IMAGE
 kubectl expose deployment NAME --port=PORT
 kubectl scale deployment nginx --replicas=REPLICAS_INTIGER
+used kubectl apply -f deployment_file.yaml along with PVC and service file to set up navidrome
 
 Additionally learned:
 1. avk use with grep (or commands that take output of previous one with this symbol: |)
