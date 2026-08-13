@@ -24,6 +24,8 @@ First problem with solution:
 Set up Macbook M1 with Asahi Linux. Made backup using wi-fi transfer since MacOS doesn't support external disk drives as ext4 and NTFS ones I have. Used tool copyparty.
 Asahi Linux installed and completed basic configuration along with connection thru ssh from the ubuntu desktop.
 
+ wireguard set up resulting in virtual network thru vps
+
 Basic commands to manage pods, services
 kubectl get pods
 kubectl get services or kubectl get svc
