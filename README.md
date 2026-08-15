@@ -99,3 +99,5 @@ Filled ip, mac address, port of the desktop pc to wake it up using mobile app th
 https://github.com/herzhenr/simple-wake-on-lan
 
 Moonlight auto-configures mac address if you set it up by just clicking interface and not putting ipv4 address by yourself, so now I use moonlight to wake devices up.
+
+Enable multi to unicast in router settings for stable performance. Learned few things about operating frequency.
