@@ -105,3 +105,5 @@ Subnets
 
 
 vlans in openrwt
+
+config files for pvc deplyoment and service file for an app change mostly the spec section
