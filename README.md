@@ -103,6 +103,7 @@ Moonlight auto-configures mac address if you set it up by just clicking interfac
 Enabled multi to unicast in router settings for stable performance. Learned few things about operating frequency.
 Subnets
 
+systemd reboot 24h each 
 
 vlans in openrwt
 
