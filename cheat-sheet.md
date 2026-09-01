@@ -1,5 +1,6 @@
-1. Adding software as systemd service.
-
+```tab
+Adding software as systemd service.
+```
 So it may start as system boots and we have full control over logs, auto-restarts when service dies, etc.
 Real life example using sunshine.AppImage
 
