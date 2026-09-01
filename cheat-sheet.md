@@ -11,11 +11,15 @@ nano ~/.config/systemd/user/sunshine.service
 ```
 
 copy & paste this config for systemd service while having file open in nano from command above:
+Requires and After may listen for external services so depending on them app may start after other services are up and running.
+
 ```service
 [Unit]
 Description=Sunshine streaming service
 After=graphical-session.target
 PartOf=graphical-session.target
+# Requires=postgresql.service
+# After=postgresql.service
 
 [Service]
 Type=exec
