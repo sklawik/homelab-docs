@@ -64,4 +64,8 @@ systemctl --user disable sunshine
 
 --user parameter is needed for graphical applications
 
+Enabling service to start even after user doesn't sign in yet:
+```bash
+loginctl enable-linger USER
+```
 
