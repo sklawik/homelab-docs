@@ -69,3 +69,7 @@ Enabling service to start even after user doesn't sign in yet:
 loginctl enable-linger USER
 ```
 
+logs
+```bash
+sudo journalctl -u sunshine.service
+```
