@@ -73,3 +73,13 @@ logs
 ```bash
 sudo journalctl -u sunshine.service
 ```
+
+
+```bash
+restricted port management
+```
+```bash
+sudo sysctl -w net.ipv4.ip_unprivileged_port_start=53
+```
+-w stands for write (re-write default values)
+
