@@ -83,3 +83,46 @@ sudo sysctl -w net.ipv4.ip_unprivileged_port_start=53
 ```
 -w stands for write (re-write default values)
 
+
+
+
+----------------------- ROUTING
+Save iptables configuration:
+```bash
+sudo iptables-save | sudo tee /etc/iptables/rules.v4
+```
+
+See network config
+```bash
+nmcli show
+```
+
+Example network configuration history config
+```bash
+  36  sudo iptables -A FORWARD -i wlan0 -o end0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+   37  sudo sysctl -w net.ipv4.ip_forward=1
+   38  sudo iptables -A FORWARD -i end0 -o wlan0 -j ACCEPT
+   39  nmcli show
+   40  sudo iptables -A FORWARD -i enp1s0u1u1 -o end0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+   41  sudo iptables -A FORWARD -i wlan0 -o end0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+   42  ping 8.8.8.8
+   43  iptables -t nat -L POSTROUTING -n -v
+   44  iptables -L FORWARD -n -v
+   45  iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
+   46  iptables -A FORWARD -i end0 -o wlan0 -j ACCEPT
+   47  iptables-save | sudo tee /etc/iptables/rules.v4
+```
+
+
+Example wlan0 > end0 (ethernet) forward config
+```bash
+
+# iptables -L FORWARD -n -v
+ pkts bytes target     prot opt in     out     source               destination         
+    0     0 ACCEPT     0    --  wlan0  end0    0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED
+  202 13161 ACCEPT     0    --  end0   wlan0   0.0.0.0/0            0.0.0.0/0           
+    0     0 ACCEPT     0    --  wlan0  end0    0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED
+ iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
+ iptables -A FORWARD -i end0 -o wlan0 -j ACCEPT
+```
+
