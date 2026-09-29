@@ -131,3 +131,10 @@ Example wlan0 > end0 (ethernet) forward config
 </details>
 
 
+Overwriting conflicting packages while updating arch / arch based distro.
+Example when update will throw error that folder already exists and can not proceed:
+
+```bash
+pacman -Syu --overwrite "path1,path2,path3"
+```
+
