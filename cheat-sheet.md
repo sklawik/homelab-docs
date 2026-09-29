@@ -138,3 +138,19 @@ Example when update will throw error that folder already exists and can not proc
 pacman -Syu --overwrite "path1,path2,path3"
 ```
 
+To find out disk ID we use
+```bash
+sudo blkid
+```
+as similiar as we list disks that are connected
+```bash
+lsblk
+# and
+sudo lsblk -f /dev/disk
+```
+Edit `/etc/fstab` file
+and put line
+```bash
+UUID=YOUR_DISK_ID  PATH_TO_FOLDER  auto  defaults,nofail  0  2
+```
+
