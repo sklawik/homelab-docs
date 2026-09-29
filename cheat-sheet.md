@@ -82,11 +82,13 @@ restricted port management
 sudo sysctl -w net.ipv4.ip_unprivileged_port_start=53
 ```
 -w stands for write (re-write default values)
+```tab
+ROUTING
+```
 
+<details>
 
-
-
------------------------ ROUTING
+  ```
 Save iptables configuration:
 ```bash
 sudo iptables-save | sudo tee /etc/iptables/rules.v4
@@ -125,4 +127,7 @@ Example wlan0 > end0 (ethernet) forward config
  iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
  iptables -A FORWARD -i end0 -o wlan0 -j ACCEPT
 ```
+
+</details>
+
 
