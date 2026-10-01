@@ -154,3 +154,18 @@ and put line
 UUID=YOUR_DISK_ID  PATH_TO_FOLDER  auto  defaults,nofail  0  2
 ```
 
+
+Enable ipv4 routing in linux kernel and save it for future restarts:
+```bash
+sudo nano /etc/sysctl.d/99-ip-forward.conf
+```
+write:
+```bash
+net.ipv4.ip_forward = 1
+```
+
+save it and enable without rebooting system
+```bash
+sudo sysctl --system
+```
+
