@@ -128,6 +128,16 @@ Example wlan0 > end0 (ethernet) forward config
  iptables -A FORWARD -i end0 -o wlan0 -j ACCEPT
 ```
 
+# Good to know
+```bash
+filename is 99-ip-forward
+it is because the numer 99 or any other number in the directory has files starting from a number like 1,2,3, etc.
+the first file is loaded with configuration, then next, then next, etc. 
+our ip-forward rule is 99th.
+by default linux kernels set routing ipv4 forward to 0, because by default linux machine is a client, not a host like a router.
+```
+
+
 </details>
 
 
