@@ -178,4 +178,19 @@ save it and enable without rebooting system
 ```bash
 sudo sysctl --system
 ```
+```bash
+iptabales.service must be enabled to save ip tables changes
+```
+
+```bash
+Example of configuration that is disabled so it never gets loaded after changes:
+systemctl list-unit-files | grep -Ei 'iptables|nftables'
+iptables.service                             disabled        disabled
+nftables.service                             disabled        disabled
+
+
+the command to fix that:
+ systemctl enable iptables.service
+
+```
 
