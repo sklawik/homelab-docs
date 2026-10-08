@@ -127,7 +127,17 @@ Example wlan0 > end0 (ethernet) forward config
  iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
  iptables -A FORWARD -i end0 -o wlan0 -j ACCEPT
 ```
+```
+  315  iptables -A FORWARD -i wlan0 -o end0 -m conntrack RELATED,ESTABLISHED -j ACCEPT
+  316  iptables -A FORWARD -i wlan0 -o end0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+  317  ping 8.8.8.8
+  318  iptables -t nat -L POSTROUTING -n -v
+  319  iptables -L FORWARD -n -v
+  320  iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
+  321  iptables -A FORWARD -i end0 -o wlan0 -j ACCEPT
+  322  iptables-save | sudo tee /etc/iptables/rules.v4
 
+```
 # Good to know
 ```bash
 filename is 99-ip-forward
