@@ -204,3 +204,16 @@ the command to fix that:
 
 ```
 
+Installing moonlight specifically for Raspberry Pi
+```bash
+curl -1sLf 'https://dl.cloudsmith.io/public/moonlight-game-streaming/moonlight-qt/setup.deb.sh' | distro=raspbian codename=$(lsb_release -cs) sudo -E bash
+sudo apt update
+sudo apt upgrade
+sudo apt install moonlight-qt
+```
+
+While it has not much to do with Pi itself it's good to know system permission groups may limit inputs for such devices as Dualshock controllers that have additional functionalities.
+```
+sudo usermod -a -G input $USER
+```
+
