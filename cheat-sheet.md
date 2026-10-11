@@ -204,11 +204,16 @@ the command to fix that:
 
 ```
 
-Installing moonlight specifically for Raspberry Pi
+Installing moonlight specifically for Raspberry Pi 3 and earlier (older)
 ```bash
 curl -1sLf 'https://dl.cloudsmith.io/public/moonlight-game-streaming/moonlight-qt/setup.deb.sh' | distro=raspbian codename=$(lsb_release -cs) sudo -E bash
 sudo apt update
 sudo apt upgrade
+sudo apt install moonlight-qt
+```
+RPi 4 and newer
+```bash
+curl -1sLf 'https://dl.cloudsmith.io/public/moonlight-game-streaming/moonlight-qt/setup.deb.sh' | distro=raspbian codename=$(lsb_release -cs) sudo -E bash
 sudo apt install moonlight-qt
 ```
 
