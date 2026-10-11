@@ -206,6 +206,9 @@ the command to fix that:
 
 Installing moonlight specifically for Raspberry Pi 3 and earlier (older)
 ```bash
+https://github.com/moonlight-stream/moonlight-embedded/wiki/Packages
+```
+```bash
 curl -1sLf 'https://dl.cloudsmith.io/public/moonlight-game-streaming/moonlight-qt/setup.deb.sh' | distro=raspbian codename=$(lsb_release -cs) sudo -E bash
 sudo apt update
 sudo apt upgrade
@@ -213,8 +216,7 @@ sudo apt install moonlight-qt
 ```
 RPi 4 and newer
 ```bash
-curl -1sLf 'https://dl.cloudsmith.io/public/moonlight-game-streaming/moonlight-qt/setup.deb.sh' | distro=raspbian codename=$(lsb_release -cs) sudo -E bash
-sudo apt install moonlight-qt
+https://github.com/moonlight-stream/moonlight-docs/wiki/Installing-Moonlight-Qt-on-Raspberry-Pi-4
 ```
 
 While it has not much to do with Pi itself it's good to know system permission groups may limit inputs for such devices as Dualshock controllers that have additional functionalities.
