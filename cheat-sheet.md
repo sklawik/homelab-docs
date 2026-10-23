@@ -1,3 +1,6 @@
+nmap -sn -PE -PS22 192.168.0.0/24
+
+
 ```tab
 Adding software as systemd service.
 ```
