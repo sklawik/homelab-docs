@@ -1,3 +1,6 @@
+```compress folder to maximum level```
+`tar -cf - ./folder_name | zstd --ultra -22 -o archive.tar.zst`
+
 nmap -sn -PE -PS22 192.168.0.0/24
 arp-scan --interface=wld0 --localnet 
 
